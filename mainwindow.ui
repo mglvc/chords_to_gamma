@@ -6,25 +6,35 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1103</width>
+    <height>915</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Chords to Gamma</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="fox">
+    <normaloff>src/fox_little.jpeg</normaloff>src/fox_little.jpeg</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
      <layout class="QGridLayout" name="gridLayout">
-      <item row="7" column="3">
-       <widget class="QPushButton" name="exitBtn">
-        <property name="text">
-         <string>Выход</string>
+      <item row="5" column="0" colspan="3">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
         </property>
-       </widget>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
       </item>
-      <item row="3" column="1">
+      <item row="2" column="1">
        <spacer name="verticalSpacer_4">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -37,7 +47,31 @@
         </property>
        </spacer>
       </item>
-      <item row="0" column="1" colspan="2">
+      <item row="1" column="0" colspan="5">
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Гамма</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" colspan="2">
+         <widget class="QLineEdit" name="lineEdit_2">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="0" colspan="5">
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="1" column="2">
          <widget class="QPushButton" name="pushButton_4">
@@ -451,7 +485,20 @@
         </item>
        </layout>
       </item>
-      <item row="0" column="3" rowspan="5">
+      <item row="5" column="3">
+       <widget class="QPushButton" name="pushButton_49">
+        <property name="maximumSize">
+         <size>
+          <width>150</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Заново</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
        <spacer name="verticalSpacer">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -464,165 +511,369 @@
         </property>
        </spacer>
       </item>
-      <item row="2" column="1" colspan="2">
-       <layout class="QGridLayout" name="gridLayout_4">
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_2">
+      <item row="5" column="4">
+       <widget class="QPushButton" name="exitBtn">
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>150</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Выход</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="5">
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="2" column="6">
+         <widget class="QPushButton" name="pushButton_43">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
           <property name="text">
-           <string>Аккорды</string>
+           <string>D#m</string>
           </property>
          </widget>
         </item>
-        <item row="1" column="9">
-         <widget class="QLineEdit" name="lineEdit_9">
+        <item row="2" column="3">
+         <widget class="QPushButton" name="pushButton_40">
           <property name="minimumSize">
            <size>
             <width>40</width>
             <height>40</height>
            </size>
           </property>
-         </widget>
-        </item>
-        <item row="0" column="0">
-         <widget class="QLabel" name="label">
           <property name="text">
-           <string>Гамма</string>
+           <string>Cm</string>
           </property>
          </widget>
         </item>
-        <item row="1" column="2">
-         <widget class="QLineEdit" name="lineEdit_3">
+        <item row="2" column="7">
+         <widget class="QPushButton" name="pushButton_44">
           <property name="minimumSize">
            <size>
             <width>40</width>
             <height>40</height>
            </size>
           </property>
+          <property name="text">
+           <string>Em</string>
+          </property>
          </widget>
         </item>
-        <item row="1" column="4">
-         <widget class="QLineEdit" name="lineEdit_5">
+        <item row="2" column="1">
+         <widget class="QPushButton" name="pushButton_38">
           <property name="minimumSize">
            <size>
             <width>40</width>
             <height>40</height>
            </size>
           </property>
+          <property name="text">
+           <string>A#m</string>
+          </property>
          </widget>
         </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="lineEdit">
+        <item row="2" column="2">
+         <widget class="QPushButton" name="pushButton_39">
           <property name="minimumSize">
            <size>
             <width>40</width>
             <height>40</height>
            </size>
           </property>
+          <property name="text">
+           <string>Bm</string>
+          </property>
          </widget>
         </item>
-        <item row="1" column="3">
-         <widget class="QLineEdit" name="lineEdit_4">
+        <item row="2" column="4">
+         <widget class="QPushButton" name="pushButton_41">
           <property name="minimumSize">
            <size>
             <width>40</width>
             <height>40</height>
            </size>
           </property>
+          <property name="text">
+           <string>C#m</string>
+          </property>
          </widget>
         </item>
-        <item row="1" column="5">
-         <widget class="QLineEdit" name="lineEdit_6">
+        <item row="2" column="5">
+         <widget class="QPushButton" name="pushButton_42">
           <property name="minimumSize">
            <size>
             <width>40</width>
             <height>40</height>
            </size>
           </property>
+          <property name="text">
+           <string>Dm</string>
+          </property>
          </widget>
         </item>
-        <item row="1" column="6">
-         <widget class="QLineEdit" name="lineEdit_7">
+        <item row="2" column="8">
+         <widget class="QPushButton" name="pushButton_45">
           <property name="minimumSize">
            <size>
             <width>40</width>
             <height>40</height>
            </size>
           </property>
+          <property name="text">
+           <string>Fm</string>
+          </property>
          </widget>
         </item>
-        <item row="1" column="8">
-         <widget class="QLineEdit" name="lineEdit_8">
+        <item row="2" column="9">
+         <widget class="QPushButton" name="pushButton_46">
           <property name="minimumSize">
            <size>
             <width>40</width>
             <height>40</height>
            </size>
           </property>
+          <property name="text">
+           <string>F#m</string>
+          </property>
          </widget>
         </item>
-        <item row="1" column="7">
-         <spacer name="horizontalSpacer_2">
+        <item row="2" column="10">
+         <widget class="QPushButton" name="pushButton_47">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Gm</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5">
+         <spacer name="verticalSpacer_7">
           <property name="orientation">
-           <enum>Qt::Horizontal</enum>
+           <enum>Qt::Vertical</enum>
           </property>
           <property name="sizeHint" stdset="0">
            <size>
-            <width>40</width>
-            <height>20</height>
+            <width>20</width>
+            <height>40</height>
            </size>
           </property>
          </spacer>
         </item>
-        <item row="0" column="1" colspan="9">
-         <widget class="QLineEdit" name="lineEdit_2"/>
+        <item row="2" column="11">
+         <widget class="QPushButton" name="pushButton_48">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>G#m</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="pushButton_28">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>A</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="pushButton_14">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>A#</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButton_26">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>B</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="pushButton_27">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>C</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QPushButton" name="pushButton_29">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>C#</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="5">
+         <widget class="QPushButton" name="pushButton_30">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>D</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="8">
+         <widget class="QPushButton" name="pushButton_33">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>F</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="6">
+         <widget class="QPushButton" name="pushButton_31">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>D#</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="pushButton_37">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Am</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="7">
+         <widget class="QPushButton" name="pushButton_32">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>E</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="9">
+         <widget class="QPushButton" name="pushButton_34">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>F#</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="10">
+         <widget class="QPushButton" name="pushButton_35">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>G</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="11">
+         <widget class="QPushButton" name="pushButton_36">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>G#</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4">
+         <spacer name="verticalSpacer_8">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
-      </item>
-      <item row="1" column="1">
-       <spacer name="verticalSpacer_5">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="7" column="0">
-       <widget class="QPushButton" name="goBtn">
-        <property name="text">
-         <string>Найти гамму</string>
-        </property>
-       </widget>
-      </item>
-      <item row="7" column="1" colspan="2">
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="0" column="0" rowspan="4">
-       <spacer name="verticalSpacer_6">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
       </item>
      </layout>
     </item>
@@ -633,7 +884,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1103</width>
      <height>20</height>
     </rect>
    </property>
@@ -688,22 +939,6 @@
     <hint type="sourcelabel">
      <x>748</x>
      <y>555</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>399</x>
-     <y>299</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>exitAct</sender>
-   <signal>triggered()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
     </hint>
     <hint type="destinationlabel">
      <x>399</x>
