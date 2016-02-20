@@ -1,0 +1,74 @@
+from tkinter import *
+root = Tk() 
+canvas = Canvas(root, width = 550, height = 370, bg = "Sea Green") 
+canvas.pack() 
+
+chords = ["Em", "Fm", "F#m", "Gm", "G#m", "Am", "A#m", "Bm", "Cm", "C#m", "Dm",
+          "D#m", "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
+Gamms = ["C  Am", "C#  A#m", "D  Bm", "D#  Cm",
+         "E  C#m", "F  Dm", "F#  D#m", "G  Em",
+         "G#  Fm", "A  F#m", "A#  Gm", "B  G#m"]
+chords_on_gamma = [[15, 20, 22, 5, 10, 19, 0, 12], [16, 21, 23, 6, 11, 20, 1, 13],
+                   [17, 22, 12, 7, 0, 21, 2, 14], [18, 23, 13, 8, 1, 22, 3, 15],
+                   [19, 12, 14, 9, 2, 23, 4, 16], [20, 13, 15, 10, 3, 12, 5, 17],
+                   [21, 14, 16, 11, 4, 13, 6, 18], [22, 15, 17, 0, 5, 14, 7, 19],
+                   [23, 16, 18, 1, 6, 15, 8, 20], [12, 17, 19, 2, 7, 16, 9, 21],
+                   [13, 18, 20, 3, 8, 17, 10, 22], [14, 19, 21, 4, 9, 18, 11, 23]]
+
+
+
+chor_r=[0]*24
+chor_s=[0]*24
+gamms_r=[0]*12
+
+def draw():
+    global chor_r,chor_s,l,acc
+    canvas.delete('all')
+    for i in range(24):
+        if chor_r[i]>0: color='Green Yellow'
+        else: color='Dark Sea Green'
+        canvas.create_rectangle(i % 12 * 45 + 10, i // 12 * 35 + 10, i % 12 * 45 + 50, i // 12 * 35 + 40, tag='ch',fill=color)
+        canvas.create_text(i % 12 * 45 + 30, i // 12 * 35 + 25, text = chords[i], tag='ch')
+    for i in range(len(l)): 
+        canvas.create_text(i % 12 * 95 + 60, i // 12 * 35 + 125, text=Gamms[l[i]], tag='ch')
+    for i in range(24):
+        if i in acc: color='Green Yellow'
+        else: color='Dark Sea Green'
+        canvas.create_rectangle(i % 12 * 45 + 10, i // 12 * 35 + 210, i % 12 * 45 + 50, i // 12 * 35 + 240, tag='ch', fill=color)
+        canvas.create_text(i % 12 * 45 + 30, i // 12 * 35 + 225, text=chords[i],tag='ch')
+
+
+def sel_ch(event):
+    global a,chor_r,l,acc
+    x = (event.x - 10) // 45
+    y = (event.y - 10) // 35
+    n = y * 12 + x
+    if n in a:
+        a.pop(a.index(n))
+    else:
+        a += [n]
+    #print(a)
+    chor_r[n] = 1 - chor_r[n]
+    l = []
+    for i in range(12):
+        num = 0
+        for j in range(len(a)):
+            if a[j] in chords_on_gamma[i][0:6]:
+                num += 1
+        if num == len(a):
+            l.append(i)
+    acc = []
+    for i in range(len(l)):
+        acc += chords_on_gamma[l[i]]
+    acc = set(acc)
+    draw()
+    
+
+a=[]
+l=[]
+acc=[]
+
+canvas.tag_bind('ch','<Button-1>',sel_ch)
+draw()
+    
+root.mainloop()
